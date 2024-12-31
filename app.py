@@ -56,7 +56,7 @@ with tab1:
     # classify
     if uploaded_file:
         image = Image.open(uploaded_file)
-        image_placeholder.image(image, use_column_width=True)
+        image_placeholder.image(image, use_container_width=True)
         predictions = predict(image, model)
         class_names = {0: "Melanoma", 1: "NotMelanoma"}
         predicted_class = np.argmax(predictions)
@@ -80,7 +80,7 @@ with tab2:
     # classify
     if camera_file:
         image = Image.open(camera_file)
-        image_placeholder.image(image, use_column_width=True)
+        image_placeholder.image(image, use_container_width=True)
         predictions = predict(image, model)
         class_names = {0: "Melanoma", 1: "NotMelanoma"}
         predicted_class = np.argmax(predictions)
